@@ -1,13 +1,13 @@
-import Ionicons from '@expo/vector-icons/Ionicons';
+import React from 'react';
 import { StyleSheet, Image, Platform } from 'react-native';
-
+import Ionicons from '@expo/vector-icons/Ionicons';
 import { Collapsible } from '@/components/Collapsible';
 import { ExternalLink } from '@/components/ExternalLink';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 
-export default function TabTwoScreen() {
+export default function ExploreScreen() {
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
@@ -19,11 +19,11 @@ export default function TabTwoScreen() {
       <Collapsible title="File-based routing">
         <ThemedText>
           This app has two screens:{' '}
-          <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> and{' '}
-          <ThemedText type="defaultSemiBold">app/(tabs)/explore.tsx</ThemedText>
+          <ThemedText type="defaultSemiBold">app/(tabs)/index.js</ThemedText> and{' '}
+          <ThemedText type="defaultSemiBold">app/(tabs)/explore.js</ThemedText>
         </ThemedText>
         <ThemedText>
-          The layout file in <ThemedText type="defaultSemiBold">app/(tabs)/_layout.tsx</ThemedText>{' '}
+          The layout file in <ThemedText type="defaultSemiBold">app/(tabs)/_layout.js</ThemedText>{' '}
           sets up the tab navigator.
         </ThemedText>
         <ExternalLink href="https://docs.expo.dev/router/introduction">
@@ -49,7 +49,7 @@ export default function TabTwoScreen() {
       </Collapsible>
       <Collapsible title="Custom fonts">
         <ThemedText>
-          Open <ThemedText type="defaultSemiBold">app/_layout.tsx</ThemedText> to see how to load{' '}
+          Open <ThemedText type="defaultSemiBold">app/_layout.js</ThemedText> to see how to load{' '}
           <ThemedText style={{ fontFamily: 'SpaceMono' }}>
             custom fonts such as this one.
           </ThemedText>
@@ -71,14 +71,14 @@ export default function TabTwoScreen() {
       <Collapsible title="Animations">
         <ThemedText>
           This template includes an example of an animated component. The{' '}
-          <ThemedText type="defaultSemiBold">components/HelloWave.tsx</ThemedText> component uses
+          <ThemedText type="defaultSemiBold">components/HelloWave.js</ThemedText> component uses
           the powerful <ThemedText type="defaultSemiBold">react-native-reanimated</ThemedText> library
           to create a waving hand animation.
         </ThemedText>
         {Platform.select({
           ios: (
             <ThemedText>
-              The <ThemedText type="defaultSemiBold">components/ParallaxScrollView.tsx</ThemedText>{' '}
+              The <ThemedText type="defaultSemiBold">components/ParallaxScrollView.js</ThemedText>{' '}
               component provides a parallax effect for the header image.
             </ThemedText>
           ),
